@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
 import styled from "../../theme/styled-components";
-import { Progress } from "../ProgressBar";
+import { ProgressBar } from "../ProgressBar";
 
 /**
  * Default properties.
@@ -152,7 +152,7 @@ export const Button: React.FC<Props> = ({
       onClick={onClick}
       onMouseDown={onMouseDown}>
       <a>{children}</a>
-      {loading ? <Progress size={convertedSize} /> : null}
+      {loading ? <ProgressBar size={convertedSize} /> : null}
     </StyledContainer>
   )
 }
