@@ -2,16 +2,15 @@ import * as React from "react";
 
 import { storiesOf } from "@storybook/react";
 import { Icon } from ".";
+import icons from "./icons";
 
 storiesOf("Icon", module).add("default", () => (
   <div>
-  <p>Default</p>
-  <Icon />
-  <p>Small</p>
-  <Icon small />
-  <p>Medium</p>
-  <Icon medium />
-  <p>Large</p>
-  <Icon large />
+    {Object.keys(icons).map((name: keyof typeof icons) => 
+        <div>
+          <p>{name}</p>
+          <Icon name={name} />
+        </div>
+    )}
   </div>
 ));

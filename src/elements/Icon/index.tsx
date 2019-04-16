@@ -1,34 +1,42 @@
-// import * as React from "react";
-import styled from "../../theme/styled-components";
+import * as React from "react";
+import icons from "./icons";
 
-interface IProps {
-  small?: boolean;
-  medium?: boolean;
-  large?: boolean;
+/**
+ * Default properties.
+ *
+ * @type {Object} icon
+ */
+
+type Props = {
+  name?: keyof typeof icons;
+  size?: number;
+  fill?: string;
+  onClick?: () => void;
 }
 
-// const RIcon: React.FC<IProps> = (props) => {
-//   return <span {...props}></span>
-// }
+/**
+ * A icon.
+ *
+ * @type {Component}
+ */
 
-export const Icon = styled.span<IProps>`
-  align-items: center;
-  background-color: black;
-  display: inline-flex;
-  justify-content: center;
-  height: ${props => props.theme.icon.dimensions};
-  width: ${props => props.theme.icon.dimensions};
-  /* Sizes */
-  ${(props) => props.small && `
-    height: ${props.theme.icon.dimensions_small};
-    width: ${props.theme.icon.dimensions_small};
-  `}
-  ${(props) => props.medium && `
-    height: ${props.theme.icon.dimensions_medium};
-    width: ${props.theme.icon.dimensions_medium};
-  `}
-  ${(props) => props.large && `
-    height: ${props.theme.icon.dimensions_large};
-    width: ${props.theme.icon.dimensions_large};
-  `}
-`
+export const Icon: React.FC<Props> = ({
+  name = 'search',
+  size = 16,
+  fill,
+  onClick,
+}) => {
+  const { viewBox, d } = icons[name];
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox={viewBox}
+      fill={fill}
+      onClick={onClick}>
+      <path d={d} />
+    </svg>
+  )
+}
+
+export { icons };
