@@ -54,28 +54,36 @@ storiesOf("Hero", module).add("with container ", () => (
     <Hero medium color="red">
       <HeroBody>
         <Container>
-          Medium - Container
+          <p className="bd-notification is-success">
+            Medium - Container
+          </p>
         </Container>
       </HeroBody>
     </Hero>
     <Hero large color="yellow">
       <HeroBody>
         <Container fluid>
-          Large - Container Widescreen
+          <p className="bd-notification is-info">
+            Large - Container Fluid
+          </p>
         </Container>
       </HeroBody>
     </Hero>
     <Hero halfHeight color="green">
       <HeroBody>
         <Container breakpoint="widescreen">
-          Half Height - Container Fluid
+          <p className="bd-notification is-warning">
+            Half Height - Container Widescreen
+          </p>
         </Container>
       </HeroBody>
     </Hero>
     <Hero fullHeight color="blue">
       <HeroBody>
         <Container breakpoint="fullhd">
-          Full Height - Container FullHD
+          <p className="bd-notification is-danger">
+            Full Height - Container FullHD
+          </p>
         </Container>
       </HeroBody>
     </Hero>
