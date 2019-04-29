@@ -11,11 +11,11 @@ import { Navbar } from ".";
 
 storiesOf("Navbar", module).add("default", () => (
   <div>
-    <Navbar>
+    <Navbar shadow>
       <NavbarBrand>
         <NavbarItem>
           <img
-            src="https://bulma.io/images/bulma-logo.png"
+            src="https://bit.ly/2vm5xXY"
             alt="Bulma: a modern CSS framework based on Flexbox"
             width="112"
             height="28"
@@ -25,12 +25,12 @@ storiesOf("Navbar", module).add("default", () => (
       </NavbarBrand>
       <NavbarMenu>
         <NavbarContainer position="start">
-          <NavbarItem>Start</NavbarItem>
-          <NavbarItem>Start</NavbarItem>
+          <NavbarItem tab>Start</NavbarItem>
+          <NavbarItem tab><Icon /></NavbarItem>
         </NavbarContainer>
         <NavbarContainer position="center">
           <NavbarItem>End</NavbarItem>
-          <NavbarItem>End</NavbarItem>
+          <NavbarItem><Icon /></NavbarItem>
         </NavbarContainer>
         <NavbarContainer position="end">
           <NavbarItem>End</NavbarItem>
@@ -56,5 +56,67 @@ storiesOf("Navbar", module).add("items", () => (
     <NavbarItem active>
       Active
     </NavbarItem>
+  </div>
+));
+
+storiesOf("Navbar", module).add("fixed", () => (
+  <div>
+    <Navbar shadow color="white" fixed="top">
+      <NavbarBrand>
+        <NavbarItem>
+          <img
+            src="https://bulma.io/images/bulma-logo.png"
+            alt="Bulma: a modern CSS framework based on Flexbox"
+            width="112"
+            height="28"
+          />
+        </NavbarItem>
+        <NavbarBurger />
+      </NavbarBrand>
+      <NavbarMenu>
+        <NavbarContainer position="start">
+          <NavbarItem tab>Start</NavbarItem>
+          <NavbarItem tab>Start</NavbarItem>
+        </NavbarContainer>
+        <NavbarContainer position="center">
+          <NavbarItem>End</NavbarItem>
+          <NavbarItem>End</NavbarItem>
+        </NavbarContainer>
+        <NavbarContainer position="end">
+          <NavbarItem>End</NavbarItem>
+          <NavbarItem>End</NavbarItem>
+        </NavbarContainer>
+      </NavbarMenu>
+    </Navbar>
+    <Navbar shadow color="white" fixed="bottom">
+      <NavbarBrand>
+        <NavbarItem>
+          <img
+            src="https://bulma.io/images/bulma-logo.png"
+            alt="Bulma: a modern CSS framework based on Flexbox"
+            width="112"
+            height="28"
+          />
+        </NavbarItem>
+        <NavbarBurger />
+      </NavbarBrand>
+      <NavbarMenu>
+        <NavbarContainer position="start">
+          <NavbarItem tab>Start</NavbarItem>
+          <NavbarItem tab>Start</NavbarItem>
+        </NavbarContainer>
+        <NavbarContainer position="center">
+          <NavbarItem>End</NavbarItem>
+          <NavbarItem>End</NavbarItem>
+        </NavbarContainer>
+        <NavbarContainer position="end">
+          <NavbarItem>End</NavbarItem>
+          <NavbarItem>End</NavbarItem>
+        </NavbarContainer>
+      </NavbarMenu>
+    </Navbar>
+    <div style={{height: '1000px', textAlign: 'center', padding: '50px', color: 'blue'}}>
+      <a>Something Text...</a>
+    </div>
   </div>
 ));

@@ -1,7 +1,12 @@
 import * as React from "react";
 import styled, { css } from "../../../../theme/styled-components";
 import { media } from "../../../../utilities/mixins";
-import { Icon } from "../../../../elements/Icon";
+
+/**
+ * Default properties.
+ *
+ * @type {Object} navbar item
+ */
 
 interface IProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   value?: string;
@@ -10,71 +15,105 @@ interface IProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   active?: boolean;
 }
 
-const itemLinkShared = css`
-  color: ${props => props.theme.colors.second};
-  display: block;
-  line-height: 1.5;
-  padding: 0.5rem 0.75rem;
-  position: relative;
-  ${Icon} {
-    &:only-child {
-      margin-left: -0.25rem;
-      margin-right: -0.25rem;
+/**
+ * A sub style of the navbar item
+ *
+ * @type {Styles}
+ */
+
+const baseStyles = css`
+  color: ${(props) => props.theme.colors.second};
+  display: ${(props) => props.theme.navbar.navbaritem_ils_display};
+  line-height: ${(props) => props.theme.navbar.navbaritem_ils_line_height};
+  padding: ${(props) => props.theme.navbar.navbaritem_ils_padding_v}rem ${(props) => props.theme.navbar.navbaritem_ils_padding_h}rem;
+  position: ${(props) => props.theme.navbar.navbaritem_ils_position};
+
+  ${media.desktop`
+    align-items: ${(props) => props.theme.navbar.navbaritem_ils_desktop_align_items};
+    display: ${(props) => props.theme.navbar.navbaritem_ils_desktop_align_display};
+  `}
+`
+
+/**
+ * A sub style of the navbar item
+ *
+ * @type {Styles}
+ */
+
+const interactionStyles = css<IProps>`
+  cursor: ${(props) => props.theme.navbar.navbaritem_nlps_cursor};
+
+  &:hover {
+    color: ${(props) => props.theme.colors.first};
+
+    svg {
+      fill: ${(props) => props.theme.colors.first};
     }
   }
-  ${media.desktop`
-    align-items: center;
-    display: flex;
-  `}
-`
 
-const NavbarLinkPartialStyles = css<IProps>`
-  cursor: pointer;
-  &:hover {
-    color: ${props => props.theme.colors.second};
-  }
-  ${props => props.active && `
+  ${(props) => props.active && `
     color: ${props.theme.colors.first};
+
+    svg {
+      fill: ${props.theme.colors.first};
+    }
   `}
 `
 
-// const RNavbarItem: React.FC<IProps> = (props) => {
-//   return <a {...props}>{props.children}</a>
-// }
+/**
+ * A navbar item
+ *
+ * @type {Component}
+ */
 
 export const NavbarItem = styled.a<IProps>`
-  display: block;
-  flex-grow: 0;
-  flex-shrink: 0
-  ${itemLinkShared}
-  a& {
-    ${NavbarLinkPartialStyles}
-  }
+  display: ${(props) => props.theme.navbar.navbaritem_display};
+  flex-grow: ${(props) => props.theme.navbar.navbaritem_flex_grow};
+  flex-shrink: ${(props) => props.theme.navbar.navbaritem_flex_shrink};
+
+  ${baseStyles}
+
+  ${interactionStyles}
+
   img {
-    max-height: ${props => props.theme.navbar.item_img_max_height};
+    max-height: ${props => props.theme.navbar.navbaritem_img_max_height}rem;
   }
-  &${({ expanded }) => expanded && `
-    flex-grow: 1;
-    flex-shrink: 1;
-  `}{}
-  &${props => props.tab && `
-    border-bottom: 1px solid transparent;
-    min-height: ${props.theme.navbar.height};
-    padding-bottom: calc(0.5rem - 1px);
+
+  ${(props) => props.expanded && `
+    flex-grow: ${props.theme.navbar.navbaritem_expanded_flex_grow};
+    flex-shrink: ${props.theme.navbar.navbaritem_expanded_flex_shrink};
+  `}
+
+  ${(props) => props.tab && `
+    border-bottom: ${props.theme.navbar.navbaritem_tab_border_bottom};
+    min-height: ${props.theme.navbar.navbaritem_tab_min_height}rem;
+    padding-bottom: ${props.theme.navbar.navbaritem_tab_padding_bottom};
+
     &:hover {
       background-color: ${props.theme.colors.first};
       border-bottom-color: ${props.theme.colors.first};
+      color: ${props.theme.colors.second};
+
+      svg {
+        fill: ${props.theme.colors.second};
+      }
     }
-    &.is-active {
+
+    ${props.active && `
       background-color: ${props.theme.colors.first};
       border-bottom-color: ${props.theme.colors.first};
-      border-bottom-style: ${props.theme.navbar.tab_active_border_bottom_style};
-      border-bottom-width: ${props.theme.navbar.tab_active_border_bottom_width};
-      color: ${props.theme.colors.first};
-      padding-bottom: calc(0.5rem - ${props.theme.navbar.tab_active_border_bottom_width});
-    }
-  `}{}
+      border-bottom-style: ${props.theme.navbar.navbaritem_tab_active_border_bottom_style};
+      border-bottom-width: ${props.theme.navbar.navbaritem_tab_active_border_bottom_width}px;
+      color: ${props.theme.colors.second};
+      padding-bottom: ${props.theme.navbar.navbaritem_tab_active_padding_bottom};
+
+      svg {
+        fill: ${props.theme.colors.first};
+      }
+    `}
+  `}
+
   ${media.desktop`
-    display: flex;
+    display: ${(props) => props.theme.navbar.navbaritem_desktop_display};
   `}
 `;
