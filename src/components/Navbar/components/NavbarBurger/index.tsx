@@ -37,7 +37,7 @@ const StyledNavbarBurger = styled.a<{ active: boolean }>`
     right: ${(props) => props.theme.navbar.navbarburger_span_right}px;
     position: ${(props) => props.theme.navbar.navbarburger_span_position};
     transform-origin: ${(props) => props.theme.navbar.navbarburger_span_transform_origin};
-    transition-duration: ${(props) => props.theme.speed.def};
+    transition-duration: ${(props) => props.theme.navbar.navbarburger_span_transform_duration}ms;
     transition-property: ${(props) => props.theme.navbar.navbarburger_span_transition_property};
     transition-timing-function: ${(props) => props.theme.navbar.navbarburger_span_transition_timing_function};
 
