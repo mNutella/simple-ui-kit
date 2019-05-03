@@ -2,12 +2,11 @@ import styled from "../../../../theme/styled-components";
 import { media } from "../../../../utilities/mixins";
 import { navStartEndMenuShared } from "../../mixins";
 
-interface IProps {
+type Props = {
   position: 'start' | 'end' | 'center';
 }
 
-export const NavbarContainer = styled.div<IProps>`
-
+const NavbarContainer = styled.div<Props>`
   ${navStartEndMenuShared}
 
   ${(props) => media.desktop`
@@ -27,4 +26,6 @@ export const NavbarContainer = styled.div<IProps>`
       margin-left: auto;
     `}
   `}
-`
+`;
+
+export default NavbarContainer;

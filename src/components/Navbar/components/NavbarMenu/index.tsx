@@ -8,7 +8,7 @@ import { navStartEndMenuShared } from "../../mixins";
  * @type {component}
  */
 
-export const NavbarMenu = styled.div<{active?: boolean}>`
+const NavbarMenu = styled.div<{active?: boolean}>`
   display: ${(props) => props.theme.navbar.navbarmenu_display};
 
   ${(props) => mediaMax.desktop`
@@ -27,4 +27,6 @@ export const NavbarMenu = styled.div<{active?: boolean}>`
     flex-grow: ${(props) => props.theme.navbar.navbarmenu_desktop_flex_grow};
     flex-shrink: ${(props) => props.theme.navbar.navbarmenu_desktop_flex_shrink};
   `}
-`
+`;
+
+export default NavbarMenu;

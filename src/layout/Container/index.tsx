@@ -19,7 +19,7 @@ type Props = {
  */
 
 // If the 'fluid' work incorrect, then need to add into a first 'media.desktop' function of 'fluid' properties. 
-export const Container = styled.div<Props>`
+const Container = styled.div<Props>`
   margin: ${(props) => props.theme.container.margin};
   position: ${(props) => props.theme.container.position};
 
@@ -60,3 +60,5 @@ export const Container = styled.div<Props>`
     `}
   `}
 `;
+
+export default Container;

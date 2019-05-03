@@ -20,7 +20,7 @@ type Props = {
  * @type {Component}
  */
 
-export const Text = styled.p<Props>`
+const Text = styled.p<Props>`
   font-family: ${(props) => props.theme.fonts.montserrate};
   color: ${(props) => props.color ? 
     props.theme.colors[props.color] : 
@@ -34,3 +34,5 @@ export const Text = styled.p<Props>`
     font-size: ${props.theme.fontSizes[(props.size || 1) - 1] / 1.5}rem;
   `}
 `;
+
+export default Text;

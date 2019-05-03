@@ -1,10 +1,7 @@
 import styled from "../../theme/styled-components";
 import * as Utils from "./mixins";
-import { NavbarItem } from "./components/NavbarItem";
-import { NavbarMenu } from "./components/NavbarMenu";
-import { NavbarContainer } from "./components/NavbarContainer";
-import { NavbarBrand } from "./components/NavbarBrand";
-import { Container } from "../../layout/Container";
+import { NavbarBrand, NavbarContainer, NavbarItem, NavbarMenu } from "./components";
+import Container from "../../layout/Container";
 import { media, mediaMax, overflow_touch } from "../../utilities/mixins";
 
 /**
@@ -27,7 +24,7 @@ type Props = {
  * @type {Component}
  */
 
-export const Navbar = styled.nav<Props>`
+const Navbar = styled.nav<Props>`
   background-color: ${(props) => props.color || 'transparent'};
   min-height: ${(props) => props.theme.navbar.min_height}rem;
   position: ${(props) => props.theme.navbar.position};
@@ -118,3 +115,6 @@ export const Navbar = styled.nav<Props>`
     }
   `}
 `;
+
+export * from "./components";
+export default Navbar;

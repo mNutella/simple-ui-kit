@@ -105,7 +105,7 @@ const StyledContainer = styled.nav<{size?: 'small' | 'medium' | 'large'}>`
  * @type {Component}
  */
 
-export const Breadcrumb: React.FC<Props> = ({
+const Breadcrumb: React.FC<Props> = ({
   items,
   size
 }) => {
@@ -119,3 +119,5 @@ export const Breadcrumb: React.FC<Props> = ({
     </StyledContainer>
   )
 }
+
+export default Breadcrumb;

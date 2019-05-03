@@ -20,7 +20,7 @@ type Props = {
  * @type {Component}
  */
 
-export const Icon: React.FC<Props> = ({
+const Icon: React.FC<Props> = ({
   name = 'search',
   size = 16,
   fill,
@@ -40,3 +40,4 @@ export const Icon: React.FC<Props> = ({
 }
 
 export { icons };
+export default Icon;

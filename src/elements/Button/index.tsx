@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
 import styled from "../../theme/styled-components";
-import { ProgressBar } from "../ProgressBar";
+import ProgressBar from "../ProgressBar";
 
 /**
  * Default properties.
@@ -122,7 +122,7 @@ const StyledContainer = styled.div<Props>`
  * @type {Component}
  */
 
-export const Button: React.FC<Props> = ({
+const Button: React.FC<Props> = ({
   size,
   minW,
   disabled = false,
@@ -156,6 +156,8 @@ export const Button: React.FC<Props> = ({
     </StyledContainer>
   )
 }
+
+export default Button;
 
 /**
  * Convert the button size to progress-bar size

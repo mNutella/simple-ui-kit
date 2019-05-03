@@ -134,10 +134,12 @@ export const StyledContainer = styled.figure<Props>`
  * @type {Component}
  */
 
-export const Image: React.FC<Props> = (props) => {
+const Image: React.FC<Props> = (props) => {
   return (
     <StyledContainer {...props}>
       <img src={props.src} alt={props.alt} />
     </StyledContainer>
   )
 }
+
+export default Image;

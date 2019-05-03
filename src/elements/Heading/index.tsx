@@ -20,7 +20,7 @@ type Props = {
  * @type {Component}
  */
 
-export const Heading = styled.h1<Props>`
+const Heading = styled.h1<Props>`
   color: ${(props) => props.color ? 
     props.theme.colors[props.color] : 
     props.theme.colors.first};
@@ -35,3 +35,5 @@ export const Heading = styled.h1<Props>`
     font-size: ${props.theme.fontSizes[(props.size || 1) - 1] / 1.5}rem;
   `}
 `;
+
+export default Heading;

@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import { storiesOf } from "@storybook/react";
-import { Text } from ".";
+import Text from ".";
 
 storiesOf("Text", module).add("types", () => ( 
   <div className="bd-notification is-dark">

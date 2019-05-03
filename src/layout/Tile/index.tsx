@@ -19,8 +19,8 @@ interface IProps {
  * @type {Component}
  */
 
-// Maybe the 'media.tablet' will be need move down of component 
-export const Tile = styled.div<IProps>`
+// Maybe the 'media.tablet' will be need move to down of the component 
+const Tile = styled.div<IProps>`
   align-items: ${(props) => props.theme.tile.align_items};
   display: ${(props) => props.theme.tile.display};
   flex-basis: ${(props) => props.theme.tile.flex_basis};
@@ -67,4 +67,6 @@ export const Tile = styled.div<IProps>`
       }
     `}
   `}
-`
+`;
+
+export default Tile;

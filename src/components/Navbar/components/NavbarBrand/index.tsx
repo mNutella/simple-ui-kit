@@ -1,5 +1,5 @@
 import styled from "../../../../theme/styled-components";
-import { NavbarItem } from "../NavbarItem";
+import NavbarItem from "../NavbarItem";
 import { brandTabsShared } from "../../mixins";
 
 /**
@@ -8,7 +8,7 @@ import { brandTabsShared } from "../../mixins";
  * @type {Component}
  */
 
-export const NavbarBrand = styled.div`
+const NavbarBrand = styled.div`
   ${brandTabsShared}
 
   a ${NavbarItem} {
@@ -16,4 +16,6 @@ export const NavbarBrand = styled.div`
       background-color: ${(props) => props.theme.colors.transparent};
     }
   }
-`
+`;
+
+export default NavbarBrand;

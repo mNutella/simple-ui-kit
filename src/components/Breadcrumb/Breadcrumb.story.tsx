@@ -1,9 +1,9 @@
 import * as React from "react";
 
 import { storiesOf } from "@storybook/react";
-import { Breadcrumb } from ".";
+import Breadcrumb from ".";
 
-const breadcrumbs = ['Петр Алексеевич', '2018', 'Итоги пройденой рекламной компании'];
+const breadcrumbs = ['Declan Arias', '2019', 'Evaluating Advertising Campaign Results'];
 
 storiesOf("Breadcrumb", module).add("default", () => (
   <div className="bd-notification is-dark">

@@ -1,8 +1,8 @@
 import * as React from "react";
 
 import { storiesOf } from "@storybook/react";
-import { Hero, HeroBody, HeroFoot, HeroHead } from ".";
-import { Container } from "../Container"
+import Hero, { HeroHeader, HeroBody, HeroFooter } from ".";
+import Container from "../Container"
 
 storiesOf("Hero", module).add("default", () => (
   <div>
@@ -93,15 +93,15 @@ storiesOf("Hero", module).add("with container ", () => (
 storiesOf("Hero", module).add("in 3 parts", () => (
   <div>
     <Hero fullHeight>
-      <HeroHead>
+      <HeroHeader>
         <div className="bd-notification is-info">Header</div>
-      </HeroHead>
+      </HeroHeader>
       <HeroBody>
         Body
       </HeroBody>
-      <HeroFoot>
+      <HeroFooter>
         <div className="bd-notification is-danger">Footer</div>
-      </HeroFoot>
+      </HeroFooter>
     </Hero>
   </div>
 ));

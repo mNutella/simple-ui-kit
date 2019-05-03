@@ -105,7 +105,7 @@ const StyledContainer = styled.div`
  * @type {Component}
  */
 
-export const ProgressBar: React.FC<Props> = ({
+const ProgressBar: React.FC<Props> = ({
   size = 25,
 }) => {
   return (
@@ -117,3 +117,5 @@ export const ProgressBar: React.FC<Props> = ({
     </StyledContainer>
   )
 }
+
+export default ProgressBar;

@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import { storiesOf } from "@storybook/react";
-import { Tile } from ".";
+import Tile from ".";
 
 storiesOf("Tile", module).add("default", () => (
   <div>

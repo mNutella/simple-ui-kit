@@ -1,13 +1,8 @@
 import * as React from "react";
 
 import { storiesOf } from "@storybook/react";
-import { NavbarItem } from "./components/NavbarItem";
-import { NavbarBrand } from "./components/NavbarBrand";
-import { NavbarBurger } from "./components/NavbarBurger";
-import { NavbarMenu } from "./components/NavbarMenu";
-import { NavbarContainer } from "./components/NavbarContainer";
-import { Icon } from "../../elements/Icon";
-import { Navbar } from ".";
+import Icon from "../../elements/Icon";
+import Navbar, { NavbarBrand, NavbarBurger, NavbarContainer, NavbarItem, NavbarMenu } from ".";
 
 storiesOf("Navbar", module).add("default", () => (
   <div>

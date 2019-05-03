@@ -1,8 +1,8 @@
 import * as React from "react";
 
 import { storiesOf } from "@storybook/react";
-import { Button } from ".";
-import { Text } from "../Text";
+import Button from ".";
+import Text from "../Text";
 
 storiesOf("Button", module).add("default", () => (
   <div >

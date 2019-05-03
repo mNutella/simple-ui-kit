@@ -1,9 +1,7 @@
 import * as React from "react";
 import { useState, useRef } from "react";
 import styled from "../../theme/styled-components";
-
-import { Icon } from "../../elements/Icon";
-import { icons } from "../../elements/Icon";
+import Icon, { icons } from "../../elements/Icon";
 
 /**
  * Default properties.
@@ -85,7 +83,7 @@ const StyledInput = styled.input.attrs(({placeholder, maxLength}) => ({
  * @type {Component}
  */
 
-export const Input: React.FC<Props> = ({
+const Input: React.FC<Props> = ({
   placeholder,
   icon,
   rounded = false,
@@ -119,6 +117,8 @@ export const Input: React.FC<Props> = ({
     </StyledContainer>
   )
 }
+
+export default Input;
 
 /**
  * Hook for Input component

@@ -1,6 +1,7 @@
 import styled from "../../theme/styled-components";
-import { Container } from "../Container";
-import { Navbar } from "../../components/Navbar";
+import { HeroBody } from "./components";
+import Container from "../Container";
+import Navbar from "../../components/Navbar";
 import { media } from "../../utilities/mixins";
 
 /**
@@ -19,48 +20,12 @@ type Props = {
 }
 
 /**
- * A top container of hero
- *
- * @type {Component}
- */
-
-export const HeroHead = styled.div`
-  background-color: black;
-  flex-grow: 0;
-  flex-shrink: 0;
-`;
-
-/**
- * A middle container of hero
- *
- * @type {Component}
- */
-
-export const HeroBody = styled.div`
-  flex-grow: 1;
-  flex-shrink: 0;
-  padding: 3rem 1.5rem;
-`
-
-/**
- * A bottom container of hero
- *
- * @type {Component}
- */
-
-export const HeroFoot = styled.div`
-  background-color: aqua;
-  flex-grow: 0;
-  flex-shrink: 0;
-`;
-
-/**
  * A hero
  *
  * @type {Component}
  */
 
-export const Hero = styled.section<Props>`
+const Hero = styled.section<Props>`
   background-color: ${(props) => props.color || "aqua"};
   align-items: ${(props) => props.theme.hero.align_items};
   display: ${(props) => props.theme.hero.display};
@@ -116,3 +81,6 @@ export const Hero = styled.section<Props>`
     min-height: ${props.theme.hero.fullHeight_min_height}vh;
   `}
 `;
+
+export * from "./components";
+export default Hero;

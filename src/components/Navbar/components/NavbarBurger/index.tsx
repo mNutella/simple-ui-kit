@@ -66,7 +66,7 @@ const StyledNavbarBurger = styled.a<{ active: boolean }>`
   ${media.desktop`
     display: ${(props) => props.theme.navbar.navbarburger_desktop_display};
   `}
-`
+`;
 
 /**
  * A navbar burger.
@@ -74,7 +74,7 @@ const StyledNavbarBurger = styled.a<{ active: boolean }>`
  * @type {Component}
  */
 
-export const NavbarBurger: React.FC<Props> = ({
+const NavbarBurger: React.FC<Props> = ({
   active = false
 }) => {
   const [open, setOpen] = useState(active);
@@ -90,3 +90,5 @@ export const NavbarBurger: React.FC<Props> = ({
     </StyledNavbarBurger>
   )
 }
+
+export default NavbarBurger;

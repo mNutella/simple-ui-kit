@@ -66,7 +66,7 @@ const interactionStyles = css<IProps>`
  * @type {Component}
  */
 
-export const NavbarItem = styled.a<IProps>`
+const NavbarItem = styled.a<IProps>`
   display: ${(props) => props.theme.navbar.navbaritem_display};
   flex-grow: ${(props) => props.theme.navbar.navbaritem_flex_grow};
   flex-shrink: ${(props) => props.theme.navbar.navbaritem_flex_shrink};
@@ -117,3 +117,5 @@ export const NavbarItem = styled.a<IProps>`
     display: ${(props) => props.theme.navbar.navbaritem_desktop_display};
   `}
 `;
+
+export default NavbarItem;

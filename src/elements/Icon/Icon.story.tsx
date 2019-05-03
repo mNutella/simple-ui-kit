@@ -1,8 +1,7 @@
 import * as React from "react";
 
 import { storiesOf } from "@storybook/react";
-import { Icon } from ".";
-import icons from "./icons";
+import Icon, { icons } from ".";
 
 storiesOf("Icon", module).add("default", () => (
   <div>
