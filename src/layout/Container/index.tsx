@@ -54,7 +54,7 @@ export const Container = styled.div<Props>`
 
   ${({fluid}) => media.desktop`
     ${(props) => fluid && `
-      margin: 0 ${props.theme.indents[0]};
+      margin: ${props.theme.container.desktop_margin};
       max-width: ${props.theme.container.desktop_max_width};
       width: ${props.theme.container.desktop_width};
     `}
