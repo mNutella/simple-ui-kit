@@ -1,27 +1,34 @@
-A sample setup react+typescript+storybook.<br>
-This is repository need for create your own ui-kit.
+# simple-ui-kit
 
-## Available Scripts
+[React](https://reactjs.org/), [Typescript](https://www.typescriptlang.org/)  implementation of the Bulma CSS Framework using [Styled Compenents](https://www.styled-components.com/)
 
-In the project directory, you can run:
+## Table of Contents
 
-### `yarn build`
+- [Installation](#Installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
-Builds the app for production to the `dist` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation
 
-### `yarn storybook`
+Use the package manager [npm, yarn](https://www.npmjs.com/) to install the ui kit.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:9009](http://192.168.0.100:9009) to view it in the browser.
+```bash
+npm install --save simple-ui-kit
+```
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+or
 
-### `yarn build-storybook`
+```bash
+yarn add simple-ui-kit --save
+```
 
-Builds the storybook for production to the `storybook-static` folder.
+## Usage
 
-## Learn More
+[Checkout the docs](https://github.com/mNutella/simple-ui-kit).
 
-...
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## License
+[MIT](https://github.com/mNutella/simple-ui-kit/blob/master/LICENSE)

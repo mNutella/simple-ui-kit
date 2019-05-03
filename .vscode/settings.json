@@ -1,5 +1,7 @@
 {
   "cSpell.words": [
-    "fullhd"
-  ]
+    "fullhd",
+    "unmount"
+  ],
+  "python.pythonPath": "/usr/local/bin/python3"
 }
